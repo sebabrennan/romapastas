@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+}
+
+.contenedor {
+  width: 98%;
+  height: 98%;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr auto 1fr;
+  grid-template-areas:
+    "encabezado encabezado encabezado"
+    "contenido contenido contenido"
+    "footer footer footer";
+  margin: 1rem;
+}
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Fredoka", sans-serif;
+  background-color: rgb(252, 252, 101);
+  border-radius: 2rem;
+}
+
+.logo {
+  color: black;
+  margin-left: 2rem;
+}
+
+.navbar ul {
+  margin-right: 2rem;
+  list-style-type: none;
+  border-radius: 1rem;
+  gap: 2rem;
+  display: flex;
+}
+
+.navbar ul a {
+  text-decoration: none;
+  color: black;
+  font-family: "Fredoka", sans-serif;
+  display: block;
+}
+
+.navbar ul a:hover {
+  color: white;
+}
+
+.encabezado {
+  grid-area: encabezado;
+}
+
+.contenido {
+  grid-area: contenido;
+  background-color: rgb(252, 252, 158);
+  border-radius: 2rem;
+}
+.contenidoIndex {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.5;
+  border-radius: 2rem;
+  font-family: "Fredoka", sans-serif;
+  padding: 1.5rem;
+}
+
+.contenidoIndex-texto {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  border-radius: 2rem;
+  font-family: "Fredoka", sans-serif;
+  padding: 1.5rem;
+}
+
+.img {
+  height: 30rem;
+  border-radius: 2rem;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Fredoka", sans-serif;
+  background-color: rgb(252, 252, 101);
+  border-radius: 2rem;
+  padding: 1rem;
+  list-style-type: none;
+}
+
+.contenidoProductos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+  font-family: "Fredoka", sans-serif;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.contenidoProductos h2 {
+  text-align: center;
+  padding: 2rem;
+}
+
+.contenedorCards {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.card {
+  width: 15rem;
+}
+
+.card h3 {
+  text-align: center;
+}
+
+.card img {
+  width: 15rem;
+  border-radius: 100%;
+  padding: 0.5rem;
+}
+.contenidoContacto {
+  margin: 2rem;
+  font-family: "Fredoka", sans-serif;
+  line-height: 1.5;
+}
+.contenidoEsp {
+  margin: 1rem;
+  font-family: "Fredoka", sans-serif;
+  line-height: 1.5;
+  display: block;
+}
+.cardEsp {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+}
+.cardEsp img {
+  height: 20rem;
+  border-radius: 2rem;
+}
+@media screen and (max-width: 1024px) {
+  .contenidoIndex {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contenedor {
+    margin: 0.5rem;
+  }
+  .encabezado {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .img {
+    height: 13rem;
+  }
+  .contenedorCards {
+    display: block;
+  }
+  .cardEsp {
+    display: block;
+  }
+  .cardEsp img {
+    height: 15rem;
+  }
+}
