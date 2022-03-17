@@ -21,16 +21,8 @@ body {
     "footer footer footer";
   margin: 1rem;
 }
-
-.encabezado {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: "Fredoka", sans-serif;
+.container-fluid {
   background-color: rgb(252, 252, 101);
-  border-radius: 2rem;
-  animation-duration: 2s;
-  animation-name: aparecer;
 }
 @keyframes aparecer {
   0% {
@@ -40,36 +32,6 @@ body {
     opacity: 1;
   }
 }
-
-.logo {
-  color: black;
-  margin-left: 2rem;
-}
-
-.navbar ul {
-  margin-right: 2rem;
-  list-style-type: none;
-  border-radius: 1rem;
-  gap: 2rem;
-  display: flex;
-}
-
-.navbar ul a {
-  text-decoration: none;
-  color: black;
-  font-family: "Fredoka", sans-serif;
-  display: block;
-  transition: all 0.5s ease;
-}
-
-.navbar ul a:hover {
-  color: white;
-}
-
-.encabezado {
-  grid-area: encabezado;
-}
-
 .contenido {
   grid-area: contenido;
   background-color: rgb(252, 252, 158);
@@ -137,6 +99,7 @@ body {
 
 .card {
   width: 15rem;
+  background-color: rgb(252, 252, 158);
 }
 
 .card h3 {
