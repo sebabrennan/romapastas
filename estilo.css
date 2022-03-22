@@ -143,6 +143,10 @@ body {
   animation-name: aparecer;
 }
 
+.footerDerechos {
+  text-align: center;
+}
+
 @media screen and (max-width: 1024px) {
   .contenidoIndex {
     display: block;
