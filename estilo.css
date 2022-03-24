@@ -142,7 +142,21 @@ body {
   animation-duration: 2s;
   animation-name: aparecer;
 }
+footer h3 {
+  text-align: center;
+  flex-direction: column;
+}
+footer h4 {
+  font-weight: 800;
+}
+footer .col2 {
+  display: flex;
+}
+footer img {
+  width: 2rem;
+}
 
+}
 .footerDerechos {
   text-align: center;
 }
