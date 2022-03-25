@@ -1,0 +1,23 @@
+@media screen and (max-width: 1024px) {
+  .contenidoIndex {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor {
+    margin: 0.5rem;
+  }
+  .img {
+    height: 13rem;
+  }
+  .contenedorCards {
+    display: block;
+  }
+  .cardEsp {
+    display: block;
+  }
+  .cardEsp img {
+    height: 15rem;
+  }
+}

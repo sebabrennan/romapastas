@@ -1,0 +1,20 @@
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Fredoka", sans-serif;
+  background-color: $amarillofuerte;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: 1rem;
+  list-style-type: none;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  h4 {
+    font-weight: 800;
+  }
+}
+
+.footerDerechos {
+  text-align: center;
+}
