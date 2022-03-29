@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -17,24 +17,23 @@ body {
 .contenido {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr) [3];
-  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: auto 1fr;
-  grid-template-rows: auto 1fr;
-  grid-template-areas:
-    "contenido contenido contenido"
-    "footer footer footer";
+      grid-template-rows: auto 1fr;
+      grid-template-areas: "contenido contenido contenido" "footer footer footer";
   gap: 2rem;
   background-color: #fcfc9e;
   border-radius: 2rem;
   margin: 1rem;
   -webkit-animation-duration: 5s;
-  animation-duration: 5s;
+          animation-duration: 5s;
   -webkit-animation-name: aparecer;
-  animation-name: aparecer;
+          animation-name: aparecer;
 }
 
 .contenidoIndex {
+  grid-area: contenido;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
@@ -43,35 +42,33 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   line-height: 1.5;
   border-radius: 2rem;
-  font-family: "Fredoka", sans-serif;
   padding: 1.5rem;
 }
 
-.contenidoIndex .contenidoIndex-texto {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  line-height: 1.5;
-  border-radius: 2rem;
-  font-family: "Fredoka", sans-serif;
-  margin-right: 1.5rem;
-}
-
-.contenidoIndex .contenidoIndex-texto p {
+.contenidoIndex p {
   text-align: justify;
 }
 
 .contenidoIndex .img {
   height: 30rem;
   border-radius: 2rem;
+}
+
+.contenidoIndex-texto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 1.5;
+  border-radius: 2rem;
+  margin-right: 1.5rem;
 }
 
 .contenidoProductos {
@@ -84,13 +81,12 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 2rem;
-  font-family: "Fredoka", sans-serif;
   padding: 1rem;
   margin: 1rem;
 }
@@ -105,7 +101,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -130,7 +126,6 @@ body {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: contenido;
-  font-family: "Fredoka", sans-serif;
   line-height: 1.5;
   display: block;
   text-align: justify;
@@ -141,14 +136,40 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 1rem;
   padding: 1rem;
 }
 
 .cardEsp img {
   height: 20rem;
+  border-radius: 2rem;
+}
+
+.contenidoNosotros {
+  grid-area: contenido;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: contenido;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 1.5;
+  border-radius: 2rem;
+  padding: 1.5rem;
+}
+
+.contenidoNosotros p {
+  text-align: justify;
+}
+
+.contenidoNosotros .img {
+  height: 30rem;
   border-radius: 2rem;
 }
 
@@ -171,8 +192,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-family: "Fredoka", sans-serif;
   background-color: #fcfc65;
   border-radius: 2rem;
@@ -180,9 +201,9 @@ body {
   margin: 1rem;
   list-style-type: none;
   -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-name: aparecer;
-  animation-name: aparecer;
+          animation-name: aparecer;
 }
 
 .footer h4 {
