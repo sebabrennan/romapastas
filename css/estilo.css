@@ -109,6 +109,7 @@ body {
 .card {
   width: 15rem;
   background-color: #fcfc9e;
+  border: none;
 }
 
 .card h3 {
