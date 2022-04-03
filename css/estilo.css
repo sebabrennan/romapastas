@@ -189,26 +189,18 @@ body {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: footer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-family: "Fredoka", sans-serif;
   background-color: #fcfc65;
   border-radius: 2rem;
   padding: 1rem;
   margin: 1rem;
-  list-style-type: none;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-name: aparecer;
           animation-name: aparecer;
 }
 
-.footer h4 {
-  font-weight: 800;
+.footer li {
+  font-weight: bold;
 }
 
 .footerDerechos {
