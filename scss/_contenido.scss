@@ -74,13 +74,16 @@
     border-radius: 100%;
     padding: 0.5rem;
   }
+  &:hover {
+    transform: scale(1.1);
+    transition: 1s;
+  }
 }
 
 .contenidoEsp {
   grid-area: contenido;
   line-height: 1.5;
   display: block;
-  text-align: justify;
 }
 
 .cardEsp {
@@ -88,6 +91,7 @@
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem;
+  align-items: center;
   img {
     height: 20rem;
     border-radius: 2rem;
