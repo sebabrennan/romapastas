@@ -110,6 +110,8 @@ body {
   width: 15rem;
   background-color: #fcfc9e;
   border: none;
+  text-decoration: none;
+  color: black;
 }
 
 .card h3 {
@@ -127,6 +129,7 @@ body {
           transform: scale(1.1);
   -webkit-transition: 1s;
   transition: 1s;
+  color: black;
 }
 
 .contenidoEsp {

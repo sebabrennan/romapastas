@@ -66,6 +66,8 @@
   width: 15rem;
   background-color: $amarilloclaro;
   border: none;
+  text-decoration: none;
+  color: black;
   h3 {
     text-align: center;
   }
@@ -77,6 +79,7 @@
   &:hover {
     transform: scale(1.1);
     transition: 1s;
+    color: black;
   }
 }
 
