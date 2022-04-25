@@ -9,7 +9,7 @@
     text-align: justify;
   }
   .img {
-    height: 30rem;
+    height: 18rem;
     border-radius: 2rem;
   }
 }
@@ -114,4 +114,20 @@
   margin: 2rem;
   font-family: "Fredoka", sans-serif;
   line-height: 1.5;
+}
+.contacto {
+  text-align: center;
+}
+.form {
+  background-color: $colorfondo;
+  border-radius: 1rem;
+  text-align: center;
+}
+.formulario {
+  padding: 1.5rem;
+}
+.botones {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
 }

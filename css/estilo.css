@@ -54,7 +54,7 @@ body {
 }
 
 .contenidoIndex .img {
-  height: 30rem;
+  height: 18rem;
   border-radius: 2rem;
 }
 
@@ -182,7 +182,7 @@ body {
 }
 
 .contenidoNosotros .img {
-  height: 30rem;
+  height: 18rem;
   border-radius: 2rem;
 }
 
@@ -194,6 +194,31 @@ body {
   margin: 2rem;
   font-family: "Fredoka", sans-serif;
   line-height: 1.5;
+}
+
+.contacto {
+  text-align: center;
+}
+
+.form {
+  background-color: #ffc400fa;
+  border-radius: 1rem;
+  text-align: center;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+}
+
+.formulario {
+  padding: 1.5rem;
+}
+
+.botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 1rem;
 }
 
 .footer {
@@ -241,14 +266,37 @@ body {
   .contenidoIndex {
     display: block;
   }
+  .contenidoNosotros {
+    display: block;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: contenido;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    line-height: 1.5;
+    border-radius: 2rem;
+    padding: 1.5rem;
+  }
+  .contenidoNosotros p {
+    text-align: justify;
+  }
+  .contenidoNosotros .img {
+    height: 18rem;
+    border-radius: 2rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .contenedor {
+  .contenido {
     margin: 0.5rem;
   }
-  .img {
-    height: 13rem;
+  .contenidoIndex {
+    display: block;
   }
   .contenedorCards {
     display: block;
@@ -258,6 +306,9 @@ body {
   }
   .cardEsp img {
     height: 15rem;
+  }
+  .contenidoNosotros {
+    display: block;
   }
 }
 /*# sourceMappingURL=estilo.css.map */

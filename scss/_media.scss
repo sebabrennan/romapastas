@@ -2,14 +2,18 @@
   .contenidoIndex {
     display: block;
   }
+  .contenidoNosotros {
+    display: block;
+    @include contenido1;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .contenedor {
+  .contenido {
     margin: 0.5rem;
   }
-  .img {
-    height: 13rem;
+  .contenidoIndex {
+    display: block;
   }
   .contenedorCards {
     display: block;
@@ -19,5 +23,8 @@
   }
   .cardEsp img {
     height: 15rem;
+  }
+  .contenidoNosotros {
+    display: block;
   }
 }

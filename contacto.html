@@ -49,40 +49,42 @@
 
     <main class="contenido">
         <div class="contenidoContacto">
-                <fieldset>
-                    <legend>Contacto</legend>
-                <form action="">
-                    <div>
+            <fieldset class="form">
+                <legend class="contacto">Contacto</legend>        
+                <form action="" class="form">
+                    <div class="formulario">
                         <label for="nombre">Completa tu nombre</label>
-                        <input type="text" name="nombre" placeholder="Sebastian">
+                        <input type="text" name="nombre" placeholder="Sebastian" class="form-control">
                     </div>
-                    <div>
+                    <div class="formulario">
                         <label for="apedillo">Completa tu apedillo</label>
-                        <input type="text" name="apedillo" placeholder="Brennan">
+                        <input type="text" name="apedillo" placeholder="Brennan" class="form-control">
                     </div>
-                    <div>
+                    <div class="formulario">
                         <label for="email">Completa tu email*</label>
-                        <input type="email" name="email" placeholder="xxx@gmail.com" required>
+                        <input type="email" name="email" placeholder="xxx@gmail.com" class="form-control" required>
                     </div>
-                    <div>
+                    <div class="formulario">
                         <label for="comentario">Comentario</label>
-                        <textarea name="comentario" id="" cols="30" rows="10"></textarea>
+                        <textarea name="comentario" id="" cols="30" rows="10" class="form-control"></textarea>
                     </div>
-                    <div>
+                    <div class="formulario">
                         <label for="producto">Elige tu producto preferido</label>
-                        <select name="" id="">
+                        <select name="productos" id="">
                             <option value="fideos">Fideos</option>
                             <option value="sorrentinos">Sorrentinos</option>
                             <option value="panzottis">Panzottis</option>
                         </select>
                     </div>
-                    <div>
-                        <input type="submit" value="ENVIAR">
+                    <div class="botones">
+                        <div>
+                            <button type="submit" class="btn btn-warning" value="Enviar">Enviar</button>
+                        </div>
+                        <div>
+                            <button type="reset" class="btn btn-warning" value="Borrar">Borrar formulario</button>
+                        </div>
                     </div>
-                    <div>
-                        <input type="reset" value="Borrar formulario">
-                    </div>
-                </form>
+                </form>    
             </fieldset>
         </div>
     </main>
@@ -91,9 +93,9 @@
         <div class="container">
             <nav class="row">
                 <!--Logo-->
-                <li class="col-3 list-unstyled font-weight-bold text-reset text-uppercase">ROMA PASTAS</li>
+                <li class="col-lg-3 col-sm-6 col-xs-6 list-unstyled font-weight-bold text-reset text-uppercase">ROMA PASTAS</li>
                 <!--Menu-->
-                <ul class="col-3 font-weight-bold text-uppercase list-unstyled text-reset">
+                <ul class="col-lg-3 col-sm-6 col-xs-6 font-weight-bold text-uppercase list-unstyled text-reset">
                     <li>
                         <a class="text-reset text-decoration-none" href="index.html">Inicio</a>
                     </li>
@@ -110,17 +112,17 @@
                         <a class="text-reset text-decoration-none" href="contacto.html">Contacto</a>
                     </li>
                 </ul>
-                <div class="col-3">
+                <div class="col-lg-3 col-sm-6 col-xs-6">
                     <li class="list-unstyled font-weight-bold text-uppercase">DIRECCIÓN</li>
                     <p>Francisco Pinzón 205, B° 21 de Julio, Carrodilla, Luján de Cuyo. Mendoza - Argentina</p>
                 </div>
-                <ul class="col-3 list-unstyled">
-                    <li class="font-weight-bold text-uppercase">REDES SOCIALES</li>
+                <ul class="col-lg-3 col-sm-6 col-xs-6">
+                    <li class="list-unstyled font-weight-bold text-uppercase">REDES SOCIALES</li>
                     <li class="row">
-                        <a href="https://www.instagram.com/romapastas_/" class="text-reset">
+                        <a href="https://www.instagram.com/romapastas_/" class="text-reset" target="_blank">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="https://wa.me/message/5FXB2SFI32RNF1" class="text-reset">
+                        <a href="https://wa.me/message/5FXB2SFI32RNF1" class="text-reset" target="_blank">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a> 
                     </li>
