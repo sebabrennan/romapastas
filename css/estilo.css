@@ -54,7 +54,7 @@ body {
 }
 
 .contenidoIndex .img {
-  height: 18rem;
+  height: 15rem;
   border-radius: 2rem;
 }
 
@@ -182,7 +182,7 @@ body {
 }
 
 .contenidoNosotros .img {
-  height: 18rem;
+  height: 15rem;
   border-radius: 2rem;
 }
 
@@ -204,8 +204,6 @@ body {
   background-color: #ffc400fa;
   border-radius: 1rem;
   text-align: center;
-  margin-left: 0 auto;
-  margin-right: 0 auto;
 }
 
 .formulario {
@@ -286,7 +284,7 @@ body {
     text-align: justify;
   }
   .contenidoNosotros .img {
-    height: 18rem;
+    height: 15rem;
     border-radius: 2rem;
   }
 }
