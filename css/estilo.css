@@ -21,7 +21,8 @@ body {
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: auto 1fr;
       grid-template-rows: auto 1fr;
-      grid-template-areas: "contenido contenido contenido" "footer footer footer";
+      grid-template-areas: "contenido contenido contenido"
+ "footer footer footer";
   gap: 2rem;
   background-color: #fcfc9e;
   border-radius: 2rem;
@@ -54,7 +55,7 @@ body {
 }
 
 .contenidoIndex .img {
-  height: 15rem;
+  height: 30rem;
   border-radius: 2rem;
 }
 
@@ -182,7 +183,7 @@ body {
 }
 
 .contenidoNosotros .img {
-  height: 15rem;
+  height: 30rem;
   border-radius: 2rem;
 }
 
@@ -191,6 +192,7 @@ body {
 }
 
 .contenidoContacto {
+  grid-area: contenido;
   margin: 2rem;
   font-family: "Fredoka", sans-serif;
   line-height: 1.5;
@@ -203,7 +205,8 @@ body {
 .form {
   background-color: #ffc400fa;
   border-radius: 1rem;
-  text-align: center;
+  text-align: left;
+  margin: 3rem;
 }
 
 .formulario {
@@ -234,8 +237,18 @@ body {
           animation-name: aparecer;
 }
 
-.footer li {
+.footer li{
   font-weight: bold;
+}
+
+.footer li a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer li a:hover {
+  color: #ffc400fa;
+  transition: 0.5s;
 }
 
 .footerDerechos {
@@ -264,6 +277,10 @@ body {
   .contenidoIndex {
     display: block;
   }
+  .contenidoIndex .img {
+    height: 15rem;
+    border-radius: 2rem;
+  }
   .contenidoNosotros {
     display: block;
     -ms-grid-row: 1;
@@ -287,6 +304,9 @@ body {
     height: 15rem;
     border-radius: 2rem;
   }
+  .form {
+    margin: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -308,5 +328,7 @@ body {
   .contenidoNosotros {
     display: block;
   }
-}
+  .form {
+    margin: 0.5rem;
+  }
 /*# sourceMappingURL=estilo.css.map */
