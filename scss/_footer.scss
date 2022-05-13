@@ -1,6 +1,3 @@
-@mixin negrita {
-  font-weight: bold;
-}
 
 .footer {
   grid-area: footer;
@@ -11,7 +8,7 @@
   animation-duration: 2s;
   animation-name: aparecer;
   li{
-    @include negrita;
+    font-weight: bold;
     }  
 }
 
