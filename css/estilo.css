@@ -222,6 +222,26 @@ body {
   margin: 1rem;
 }
 
+.contenidoCarrito {
+  grid-area: contenido;
+  padding: 2rem;
+}
+
+.item-carrito {
+  padding: 1rem;
+}
+
+.btn-carrito {
+  border-color: black;
+  border-radius: 10px;
+  margin-left: 1rem;
+}
+
+.btn-carrito:hover {
+  background-color: #ffc400fa;
+}
+
+
 .footer {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
