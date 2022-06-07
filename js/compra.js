@@ -112,6 +112,7 @@ function mostrarCambio(dineroIngresado, priceProduct) {
     contenedor.appendChild(cambioFinal)
 
     resetVars();
+    resumenPedido();
 }
 
 function resetVars() {
@@ -127,15 +128,9 @@ function resumenPedido() {
         let key = localStorage.key(i);
         let value = localStorage.getItem(key);
         console.log(key,value)
-    }
-    
-    
-    resumenLocalStorage = localStorage.getItem(key, value)
-
-    resumen.innerHTML = `<h4>Resumen del pedido:</h4>
-                            <p>${resumenLocalStorage}</p>`
-                            
+        resumen.innerHTML = `<h4>Resumen del pedido:</h4>
+        <p>Producto: ${key} - ${value} ARS</p>`
+        }
+          
     contenedor.appendChild(resumen)
 }
-
-
