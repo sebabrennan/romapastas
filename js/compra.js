@@ -88,7 +88,9 @@ function pedirDinero(priceProduct){
         mostrarCambio(document.getElementById("dineroIngresado").value, priceProduct)
     })
     
-    /* if(dineroIngresado<priceProduct){
+   /*  document.getElementById("dineroIngresado").value ? mostrarCambio(document.getElementById("dineroIngresado").value, priceProduct) : alert("monto invalido") */
+/* 
+    if(dineroIngresado<priceProduct){
         alert("monto invalido")
     }
 
