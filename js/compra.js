@@ -82,24 +82,19 @@ function pedirDinero(priceProduct){
     const contenedor = document.querySelector(".contenidoCarrito")
     
     contenedor.appendChild(dineroIngresado)
+
+    
     
     const boton = document.getElementById ("btnDineroIngresado");
     boton.addEventListener("click", () => {
-        mostrarCambio(document.getElementById("dineroIngresado").value, priceProduct)
-    })
-    
-   /*  document.getElementById("dineroIngresado").value ? mostrarCambio(document.getElementById("dineroIngresado").value, priceProduct) : alert("monto invalido") */
-/* 
-    if(dineroIngresado<priceProduct){
-        alert("monto invalido")
-    }
 
-    else{
-        mostrarCambio(dineroIngresado, priceProduct);
-    } */
+        const dineroValue = document.getElementById("dineroIngresado").value
+        dineroValue>=priceProduct ? mostrarCambio(dineroValue, priceProduct) : alert("El monto ingresado es menor al precio del producto")
+    })
 }
-   
+
 function mostrarCambio(dineroIngresado, priceProduct) {
+
     let cambio = dineroIngresado - priceProduct;
 
     const cambioFinal = document.createElement("div")
