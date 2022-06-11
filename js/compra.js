@@ -89,7 +89,38 @@ function pedirDinero(priceProduct){
     boton.addEventListener("click", () => {
 
         const dineroValue = document.getElementById("dineroIngresado").value
-        dineroValue>=priceProduct ? mostrarCambio(dineroValue, priceProduct) : alert("El monto ingresado es menor al precio del producto")
+
+        if (dineroValue>=priceProduct){
+            Swal.fire({
+                title: '¡Pedido realizado',
+                text: 'Su pedido ha sido realizado con éxito',
+                icon: 'success',
+                confirmButtonText: 'Aceptar',
+                confirmButtonColor: '#ffc400fa',
+                background: '#fcfc9e'
+            })
+            mostrarCambio(dineroValue, priceProduct)
+
+        }
+        else {
+            Swal.fire({
+                title: '¡Error!',
+                text: 'El monto ingresado es menor al precio del producto',
+                icon: 'error',
+                confirmButtonText: 'Aceptar',
+                confirmButtonColor: '#ffc400fa',
+                background: '#fcfc9e'
+            })
+        }
+
+
+        /* dineroValue>=priceProduct ? mostrarCambio(dineroValue, priceProduct) : swal.fire({
+            title: '¡Error!',
+            text: 'El monto ingresado es menor al precio del producto',
+            icon: 'error',
+            confirmButtonText: 'Aceptar'
+        }) */
+        
     })
 }
 
