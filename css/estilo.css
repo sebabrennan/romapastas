@@ -224,7 +224,7 @@ body {
 
 .contenidoCarrito {
   grid-area: contenido;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .item-carrito {

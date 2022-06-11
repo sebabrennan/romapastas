@@ -24,10 +24,16 @@ const boton1 = document.getElementById("Productos");
 function mostrarMenuProductos(){
 
     const h4 = document.createElement("h4")
+    h4.classList.add("item-carrito")
 
     const btnFideos = document.createElement("button");
     const btnSorrentinos= document.createElement("button");
     const btnPanzottis = document.createElement("button");
+
+    btnFideos.classList.add("btn", "btn-carrito")
+    btnSorrentinos.classList.add("btn", "btn-carrito")
+    btnPanzottis.classList.add("btn","btn-carrito")
+    
 
     h4.innerText = "¿Qué producto desea pedir?"
 
@@ -45,17 +51,17 @@ function mostrarMenuProductos(){
 
     btnFideos.addEventListener("click", ()=>{
         venderProducto(1)
-        sessionStorage.setItem (fideos.nombre,fideos.precio);
+        localStorage.setItem (fideos.nombre,fideos.precio);
     });
 
     btnSorrentinos.addEventListener("click", ()=>{
         venderProducto(2)
-        sessionStorage.setItem (sorrentinos.nombre, sorrentinos.precio);
+        localStorage.setItem (sorrentinos.nombre, sorrentinos.precio);
     });
 
     btnPanzottis.addEventListener("click", ()=>{
         venderProducto(3)
-        sessionStorage.setItem (panzottis.nombre, panzottis.precio);
+        localStorage.setItem (panzottis.nombre, panzottis.precio);
     });
 
 }
@@ -69,30 +75,31 @@ function pedirDinero(priceProduct){
     const dineroIngresado = document.createElement ("div")
     dineroIngresado.innerHTML = `<label>¿Con cuanto va a pagar?</label>
                         <input type=text id=dineroIngresado>
-                        <button id=btnDineroIngresado>Enviar</button>`
+                        <button id=btnDineroIngresado class="btn btn-carrito">Enviar</button>`
+    
+    dineroIngresado.classList.add("item-carrito")
                         
     const contenedor = document.querySelector(".contenidoCarrito")
     
     contenedor.appendChild(dineroIngresado)
+
+    
     
     const boton = document.getElementById ("btnDineroIngresado");
     boton.addEventListener("click", () => {
-        mostrarCambio(document.getElementById("dineroIngresado").value, priceProduct)
-    })
-    
-    /* if(dineroIngresado<priceProduct){
-        alert("monto invalido")
-    }
 
-    else{
-        mostrarCambio(dineroIngresado, priceProduct);
-    } */
+        const dineroValue = document.getElementById("dineroIngresado").value
+        dineroValue>=priceProduct ? mostrarCambio(dineroValue, priceProduct) : alert("El monto ingresado es menor al precio del producto")
+    })
 }
-   
+
 function mostrarCambio(dineroIngresado, priceProduct) {
+
     let cambio = dineroIngresado - priceProduct;
 
     const cambioFinal = document.createElement("div")
+
+    cambioFinal.classList.add("item-carrito")
     
     cambioFinal.innerHTML = `<h4>Su cambio es: ${cambio}</h4>
                                 <h4>Su pedido fue realizado con éxito, ¡Muchas gracias!`
@@ -101,16 +108,26 @@ function mostrarCambio(dineroIngresado, priceProduct) {
 
     contenedor.appendChild(cambioFinal)
 
-    /*    
-    const resumen = document.createElement("div");
-    resumen.innerHTML = `<h4>Resumen del pedido:</h4>
-                            <p>${sessionStorage.getItem(key, value)}</p>`
-    document.body.appendChild(resumen)
-     */
-    
     resetVars();
+    resumenPedido();
 }
 
 function resetVars() {
     dineroIngresado = 0;
+}
+   
+function resumenPedido() {
+    const resumen = document.createElement("div");
+    resumen.classList.add("item-carrito")
+    const contenedor = document.querySelector(".contenidoCarrito")
+
+    for (let i=0; i<localStorage.length;i++) {
+        let key = localStorage.key(i);
+        let value = localStorage.getItem(key);
+        console.log(key,value)
+        resumen.innerHTML = `<h4>Resumen del pedido:</h4>
+        <p>Producto: ${key} - ${value} ARS</p>`
+        }
+          
+    contenedor.appendChild(resumen)
 }
