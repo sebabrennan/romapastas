@@ -98,6 +98,21 @@
   }
 }
 
+.cardProducto {
+  border:1px solid $colorfondo;
+  border-radius: 20px;
+  text-align: center;
+  width:18%;
+  cursor:pointer;
+  img {
+    width: 80%;
+    height: 80%;
+    margin-top: 1rem;
+    border-radius: 1rem;
+
+  }
+}
+
 .contenidoNosotros {
   grid-area: contenido;
   display: flex;
@@ -145,3 +160,19 @@
   grid-area: contenido;
   padding: 3rem;
 }
+
+.item-carrito {
+  padding: 1rem;
+}
+
+.btn-carrito {
+  border-color: black;
+  border-radius: 10px;
+  margin-left: 1rem;
+}
+
+.btn-carrito:hover {
+  background-color: #ffc400fa;
+}
+
+

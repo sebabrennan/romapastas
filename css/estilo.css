@@ -21,8 +21,7 @@ body {
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: auto 1fr;
       grid-template-rows: auto 1fr;
-      grid-template-areas: "contenido contenido contenido"
- "footer footer footer";
+      grid-template-areas: "contenido contenido contenido" "footer footer footer";
   gap: 2rem;
   background-color: #fcfc9e;
   border-radius: 2rem;
@@ -34,7 +33,6 @@ body {
 }
 
 .contenidoIndex {
-  grid-area: contenido;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
@@ -55,7 +53,7 @@ body {
 }
 
 .contenidoIndex .img {
-  height: 30rem;
+  height: 20rem;
   border-radius: 2rem;
 }
 
@@ -161,8 +159,22 @@ body {
   border-radius: 2rem;
 }
 
+.cardProducto {
+  border: 1px solid #ffc400fa;
+  border-radius: 20px;
+  text-align: center;
+  width: 18%;
+  cursor: pointer;
+}
+
+.cardProducto img {
+  width: 80%;
+  height: 80%;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+
 .contenidoNosotros {
-  grid-area: contenido;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
@@ -183,7 +195,7 @@ body {
 }
 
 .contenidoNosotros .img {
-  height: 30rem;
+  height: 20rem;
   border-radius: 2rem;
 }
 
@@ -192,6 +204,9 @@ body {
 }
 
 .contenidoContacto {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: contenido;
   margin: 2rem;
   font-family: "Fredoka", sans-serif;
@@ -205,8 +220,7 @@ body {
 .form {
   background-color: #ffc400fa;
   border-radius: 1rem;
-  text-align: left;
-  margin: 3rem;
+  text-align: center;
 }
 
 .formulario {
@@ -223,8 +237,11 @@ body {
 }
 
 .contenidoCarrito {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: contenido;
-  padding: 1rem;
+  padding: 3rem;
 }
 
 .item-carrito {
@@ -241,7 +258,6 @@ body {
   background-color: #ffc400fa;
 }
 
-
 .footer {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -257,7 +273,7 @@ body {
           animation-name: aparecer;
 }
 
-.footer li{
+.footer li {
   font-weight: bold;
 }
 
@@ -268,6 +284,7 @@ body {
 
 .footer li a:hover {
   color: #ffc400fa;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -297,35 +314,8 @@ body {
   .contenidoIndex {
     display: block;
   }
-  .contenidoIndex .img {
-    height: 15rem;
-    border-radius: 2rem;
-  }
   .contenidoNosotros {
     display: block;
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-area: contenido;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    line-height: 1.5;
-    border-radius: 2rem;
-    padding: 1.5rem;
-  }
-  .contenidoNosotros p {
-    text-align: justify;
-  }
-  .contenidoNosotros .img {
-    height: 15rem;
-    border-radius: 2rem;
-  }
-  .form {
-    margin: 1.5rem;
   }
 }
 
@@ -335,6 +325,10 @@ body {
   }
   .contenidoIndex {
     display: block;
+  }
+  .contenidoIndex .img {
+    height: 15rem;
+    border-radius: 2rem;
   }
   .contenedorCards {
     display: block;
@@ -347,8 +341,29 @@ body {
   }
   .contenidoNosotros {
     display: block;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: contenido;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    line-height: 1.5;
+    border-radius: 2rem;
+    padding: 1.5rem;
+  }
+  .contenidoNosotros p {
+    text-align: justify;
+  }
+  .contenidoNosotros .img {
+    height: 15rem;
+    border-radius: 2rem;
   }
   .form {
     margin: 0.5rem;
   }
+}
 /*# sourceMappingURL=estilo.css.map */

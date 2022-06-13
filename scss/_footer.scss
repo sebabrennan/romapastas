@@ -12,6 +12,16 @@
     }  
 }
 
+.footer li a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer li a:hover {
+  color: #ffc400fa;
+  transition: 0.5s;
+}
+
 .footerDerechos {
   text-align: center;
 }

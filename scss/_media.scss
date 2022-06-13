@@ -14,6 +14,11 @@
   .contenidoIndex {
     display: block;
   }
+  .contenidoIndex .img {
+    height: 15rem;
+    border-radius: 2rem;
+  }
+
   .contenedorCards {
     display: block;
   }
@@ -25,5 +30,28 @@
   }
   .contenidoNosotros {
     display: block;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: contenido;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    line-height: 1.5;
+    border-radius: 2rem;
+    padding: 1.5rem;
+  }
+  .contenidoNosotros p {
+    text-align: justify;
+  }
+  .contenidoNosotros .img {
+    height: 15rem;
+    border-radius: 2rem;
+  }
+  .form {
+    margin: 0.5rem;
   }
 }

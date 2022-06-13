@@ -1,4 +1,4 @@
-
+/* 
 class Productos{
     constructor(nombre,precio) {
         this.nombre=nombre
@@ -10,18 +10,79 @@ const fideos = new Productos("Fideos",300)
 const sorrentinos = new Productos("Sorrentinos", 400);
 const panzottis = new Productos("Panzottis",400);
 
-const productos = [fideos, sorrentinos, panzottis]
+const productos = [fideos, sorrentinos, panzottis] */
 
-let opcionProductos = 0;
+
+let carrito =[];
+
+class ProductoCarrito {
+    constructor(nombre, precio, imagen, id){
+        this.nombre=nombre;
+        this.precio=precio;
+        this.imagen=imagen;
+        this.id=id;
+    }
+}
+
+let divContainer = document.getElementById("row");
+
+function rellenarPagina(arrayProductos) {
+    
+    for (let producto of arrayProductos) {
+        let div = document.createElement("div")
+        div.classList = "col-3 mt-3";
+
+        div.innerHTML = `<div class="cardProducto" style= "width:15rem;">
+                            <img src="${producto.imagen}" class="card-img-top" alt=${producto.id}>  
+                            <div class="card-body">
+                                <h5 class="card-title">${producto.nombre}</h5>
+                                <p class="card-text">$ <strong>${producto.precio}</strong> ARS</p>
+                                <button class="btn btn-primary anadirCarrito">Añadir al carrito</button>
+                            </div>
+                        </div>`
+
+        divContainer.appendChild(div)
+    } 
+}
+
+rellenarPagina(productos);
+
+let botones = document.querySelectorAll(".anadirCarrito");
+
+botones.forEach(elemento => {
+    elemento.addEventListener("click", anadirCarrito)
+})
+
+function anadirCarrito(e){
+
+    let carritoLocalStorage = JSON.parse(localStorage.getItem("carrito"))
+
+    if (carritoLocalStorage){
+        carrito = carritoLocalStorage
+    }
+
+    let nombre = e.target.parentNode.children[0].textContent;
+    let precio = e.target.parentNode.children[1].children[0].textContent;
+    let imagen = e.target.parentNode.parentNode.children[0].src;
+    let id = e.target.parentNode.parentNode.children[0].alt;
+
+    const producto = new ProductoCarrito (nombre, precio, imagen, id)
+
+    carrito.push(producto)
+
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+}
+
+/* let opcionProductos = 0;
 
 let dineroIngresado = 0;
 
 const boton1 = document.getElementById("Productos");
     boton1.addEventListener("click", ()=>{
         mostrarMenuProductos();
-    });
+    }); */
 
-function mostrarMenuProductos(){
+/* function mostrarMenuProductos(){
 
     const h4 = document.createElement("h4")
     h4.classList.add("item-carrito")
@@ -111,16 +172,7 @@ function pedirDinero(priceProduct){
                 confirmButtonColor: '#ffc400fa',
                 background: '#fcfc9e'
             })
-        }
-
-
-        /* dineroValue>=priceProduct ? mostrarCambio(dineroValue, priceProduct) : swal.fire({
-            title: '¡Error!',
-            text: 'El monto ingresado es menor al precio del producto',
-            icon: 'error',
-            confirmButtonText: 'Aceptar'
-        }) */
-        
+        } 
     })
 }
 
@@ -161,4 +213,4 @@ function resumenPedido() {
         }
           
     contenedor.appendChild(resumen)
-}
+} */
