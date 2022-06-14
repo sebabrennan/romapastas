@@ -54,16 +54,16 @@
     </nav>
 
     <main class="contenido">
-        <!-- <div class="contenidoCarrito">
-            <h2 class="item-carrito">¡Bienvenido/a!</h2>
-            <h4 class="item-carrito">Para realizar su pedido toque en el botón "Comprar productos"</h4>
-            <button id="Productos" class="btn btn-carrito">Comprar productos</button>
-        </div> -->
-        <div class="contenidoCarrito d-flex justify-content-center">
-            <div id="row" class="row mb-3">
 
+        <div class="contenidoCarrito">
+            <div id="carrito"></div>
+            <div id="totalCarrito"></div>
+            <div id="menuCarrito" >
+                <button id=vaciarCarrito class="btn btnVaciarCarrito">Vaciar Carrito</button>
             </div>
+            <div id="productosCarrito" class="boxProductos"></div>
         </div>
+
     </main>
 
     <footer class="text-dark footer wow">
@@ -114,6 +114,7 @@
         </h6>
     </div>
 
+    <script src="js/class.js"></script>
     <script src="js/productos.js"></script>
     <script src="js/compra.js"></script>
     

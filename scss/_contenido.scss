@@ -59,7 +59,7 @@
   margin-top: 3rem;
 }
 
-.card {
+.cards {
   width: 15rem;
   background-color: $amarilloclaro;
   border: none;
@@ -159,20 +159,53 @@
 .contenidoCarrito {
   grid-area: contenido;
   padding: 3rem;
+
 }
 
-.item-carrito {
-  padding: 1rem;
+.boxProductos {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.btn-carrito {
-  border-color: black;
-  border-radius: 10px;
-  margin-left: 1rem;
-}
-
-.btn-carrito:hover {
+.cardCarrito {
+  margin: 1rem;
+  width: 300px;
   background-color: #ffc400fa;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $colorfondo;
+  img{
+    width: 100%;
+    height: 71%;
+  }
 }
 
+.btnCarrito {
+  background-color: $amarilloclaro;
+  margin-bottom: 1rem;
+  &:hover{
+    background-color: $amarillofuerte;
+  }
+}
 
+.btnVaciarCarrito {
+  background-color: $colorfondo;
+}
+
+.cardMiniCarrito {
+  border: 3px solid $colorfondo;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  width: 15%;
+  background-color: $amarilloclaro;
+  display: flex;
+  align-items: center;
+  img{
+    border-radius: 1rem;
+  }
+
+}

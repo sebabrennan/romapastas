@@ -32,7 +32,7 @@ const productos = [
     {
         nombre: 'Fideos al huevo',
         precio: 300,
-        imagen: "./images/fideos-caseros.jpg",
+        imagen: "./images/fideos.jpg",
         id: 6
     },
     {

@@ -105,7 +105,7 @@ body {
   margin-top: 3rem;
 }
 
-.card {
+.cards {
   width: 15rem;
   background-color: #fcfc9e;
   border: none;
@@ -113,17 +113,17 @@ body {
   color: black;
 }
 
-.card h3 {
+.cards h3 {
   text-align: center;
 }
 
-.card img {
+.cards img {
   width: 15rem;
   border-radius: 100%;
   padding: 0.5rem;
 }
 
-.card:hover {
+.cards:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: 1s;
@@ -244,18 +244,71 @@ body {
   padding: 3rem;
 }
 
-.item-carrito {
-  padding: 1rem;
+.boxProductos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.btn-carrito {
-  border-color: black;
-  border-radius: 10px;
-  margin-left: 1rem;
-}
-
-.btn-carrito:hover {
+.cardCarrito {
+  margin: 1rem;
+  width: 300px;
   background-color: #ffc400fa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffc400fa;
+}
+
+.cardCarrito img {
+  width: 100%;
+  height: 71%;
+}
+
+.btnCarrito {
+  background-color: #fcfc9e;
+  margin-bottom: 1rem;
+}
+
+.btnCarrito:hover {
+  background-color: #fcfc65;
+}
+
+.btnVaciarCarrito {
+  background-color: #ffc400fa;
+}
+
+.cardMiniCarrito {
+  border: 3px solid #ffc400fa;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  width: 15%;
+  background-color: #fcfc9e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardMiniCarrito img {
+  border-radius: 1rem;
 }
 
 .footer {
