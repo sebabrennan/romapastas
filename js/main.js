@@ -1,10 +1,18 @@
 
 const miCarrito = new Carrito ([]);
 
+cargarProductos();
 mostrarProductos();
 mostrarCarrito();
 mostrarTotalCarrito();
 programarBotonesCarrito();
+
+function cargarProductos() {
+    fetch("js/data/productos.json")
+       .then((response) => response.json())
+       .then((json) => mostrarDatos(json))
+       .catch(() => alert("intente de nuevo"))
+ }
 
 
 function mostrarProductos()
