@@ -31,13 +31,13 @@ class Carrito{
 
         vaciarCarrito()
         {
-            this.productos=[];
+            this.miCarrito=[];
         }
 
         borrarProducto(producto)
         {
             const pABorrar = this.productos.find(element=>producto.id===element.id);
-            console.log("PRODCTO A BORRAR");
+            console.log("PRODUCTO A BORRAR");
             console.log(pABorrar);
 
             const index = this.productos.indexOf(pABorrar);

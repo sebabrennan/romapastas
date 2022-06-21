@@ -1,21 +1,21 @@
 
 const miCarrito = new Carrito ([]);
 
-cargarProductos();
-mostrarProductos();
+let productos = cargarProductos();
+mostrarProductos(productos);
 mostrarCarrito();
 mostrarTotalCarrito();
 programarBotonesCarrito();
 
 function cargarProductos() {
-    fetch("./js/data/productos.json")
+    return fetch("http://localhost:3000/productos")
        .then((response) => response.json())
-       .then((json) => mostrarDatos(json))
+       .then((json) => mostrarProductos(json))
        .catch(() => alert("intente de nuevo"))
  }
 
 
-function mostrarProductos()
+function mostrarProductos(productos)
 {
     productos.forEach(element => {
         const div = document.createElement("div");
