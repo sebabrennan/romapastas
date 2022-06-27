@@ -1,19 +1,18 @@
 
 const miCarrito = new Carrito ([]);
 
-let productos = cargarProductos();
-mostrarProductos(productos);
+cargarProductos();
 mostrarCarrito();
 mostrarTotalCarrito();
 programarBotonesCarrito();
+
 
 function cargarProductos() {
     return fetch("http://localhost:3000/productos")
        .then((response) => response.json())
        .then((json) => mostrarProductos(json))
        .catch(() => alert("intente de nuevo"))
- }
-
+}
 
 function mostrarProductos(productos)
 {
@@ -37,6 +36,14 @@ function mostrarProductos(productos)
             miCarrito.agregarProducto(productoParaCarrito);
             mostrarCarrito();
             console.log("Carrito", miCarrito);
+
+            Toastify({
+                text: "Producto agregado exitosamente", 
+                duration: 3000,
+                style: {
+                    background: 'green'
+                 },
+             }).showToast();
         })
 
         div.appendChild(btn);
@@ -67,6 +74,14 @@ function mostrarCarrito()
         btnBorrar.addEventListener('click', 
         ()=>{
             borrarProducto(element);
+
+            Toastify({
+                text: "Producto borrado", 
+                duration: 3000,
+                style: {
+                    background: 'red'
+                 },
+             }).showToast();
         })
         div.appendChild(btnBorrar);
 
