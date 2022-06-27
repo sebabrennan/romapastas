@@ -94,11 +94,11 @@ function programarBotonesCarrito()
 
 function programarVaciarCarrito()
 {
-     const btn = document.getElementById('vaciarCarrito')
-     btn.addEventListener('click', ()=>{
-         miCarrito.vaciarCarrito();
-         mostrarCarrito();
-     })
+    const btn = document.getElementById('vaciarCarrito')
+    btn.addEventListener('click', ()=>{
+        miCarrito.vaciarCarrito();
+        mostrarCarrito();
+    })
 }
 
 function borrarProducto(producto)
